@@ -1,6 +1,6 @@
-import Link from "next/link";
 import Head from "next/head";
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Button } from "@chakra-ui/react";
+import Question from "../components/Question";
 
 export default function Home() {
   return (
@@ -18,12 +18,19 @@ export default function Home() {
           <Heading as="h2" size="md" mb={6}>
             Esteja preparado para todas as batalhas e proteger seu dinheiro.
           </Heading>
-          <Box>
-            <Text>Você gasta mais do que ganha?</Text>
-            <Link href="dividas">
-              <a href="dividas">{"->"} Sim</a>
-            </Link>
-          </Box>
+          <Question
+            mainText="Você gasta mais do que ganha?"
+            positiveAnswer="Sim"
+            negativeAnswer="Não"
+            colorScheme="orange"
+          />
+
+          <Question
+            mainText="Você já fez algum tipo de investimento?"
+            positiveAnswer="Sim"
+            negativeAnswer="Não"
+            colorScheme="orange"
+          />
         </Box>
       </Flex>
     </div>
