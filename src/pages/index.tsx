@@ -1,6 +1,8 @@
 import Head from "next/head";
-import { Box, Flex, Heading, Text, Button } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
+
 import Question from "../components/Question";
+import Missions from "../components/Missions";
 
 export default function Home() {
   return (
@@ -31,6 +33,8 @@ export default function Home() {
             negativeAnswer="Não"
             colorScheme="orange"
           />
+
+          <Missions />
         </Box>
       </Flex>
     </div>
